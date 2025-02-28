@@ -1,0 +1,200 @@
+/* Apply Inter font globally */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Improve text readability */
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p, a {
+    font-weight: 400;
+}
+
+/* Layout: Ensure content is centered and image is positioned lower */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area stretches to push the footer down */
+.main-content {
+    flex: 1;
+}
+
+/* Style for 'Hugo Affaticati' name on header */
+.header-name {
+    position: absolute;
+    left: 15%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    color: #333; /* Adjust text color as needed */
+}
+
+/* Header Styling */
+header {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 10px 0; /* Keep padding to avoid cramping */
+    width: 100%; /* Ensure it spans full width */
+    position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+
+/* Navigation menu */
+.nav-menu {
+    list-style: none;
+    padding: 5px;
+    margin: 0 15% 0 0;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end; /* Aligns menu to the right */
+}
+
+/* Style each navigation link */
+.nav-menu li {
+    display: block;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #ddd;
+}
+
+.nav-menu .active {
+    color: #007bff; /* Highlight active page */
+}
+
+/* Make the active link blue */
+.nav-menu li a.active {
+    color: #007bff; /* Blue color */
+}
+
+
+.publications-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px 20px; /* Add space above, sides, and below */
+    text-align: center; /* Center the text */
+}
+
+.publications-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0; /* Remove margin to keep it compact */
+}
+
+.publications-header p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px; /* Space between title and paragraph */
+}
+
+/* Container for centering the publications */
+.publication-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px; /* Add space on both sides */
+}
+
+/* Each individual publication entry */
+.publication-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Make sure it's responsive */
+    max-width: 1200px; /* Max width to prevent overly wide entries */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px; /* Adjust space between entries */
+}
+
+.publication-entry.column {
+    flex-direction: column;
+    align-items: flex-start; /* Ensures text is aligned to the left */
+}
+
+/* Left section with the title and text */
+.publication-left {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    text-align: left; /* Align text to the left */
+}
+.publication-right {
+    flex: 1;
+    text-align: right; /* Aligns content to the right */
+}
+
+/* Modify this to center text only if text exists on the right */
+.publication-entry.has-right-text .publication-right {
+    text-align: center; /* Center content when there's text on the right */
+}
+
+
+/* Right section with the image */
+.publication-right img {
+    max-width: none; /* Adjust image size */
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Ensure proper alignment and style for links */
+.publication-left a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 0px; /* Removes extra spacing */
+}
+
+.publication-left a:hover {
+    text-decoration: inline;
+}
+
+.link-text {
+    text-decoration: inline; /* Makes the text appear underlined */
+    color: #007bff; /* Optional: Make the text look like a link */
+    cursor: pointer; /* Make it look clickable */
+}
+
+
+.publication-left .name {
+    display: inline; /* Keeps the title inline with the text */
+}
+
+
+/* Ensure the blog name and date are on the next line but without extra space */
+.publication-left span {
+    display: block; /* Forces onto a new line */
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.2; /* Controls spacing between lines */
+    margin-top: 0px; /* Ensures no additional gap */
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    width: 100%; /* Ensure it spans the full width */
+    margin-top: auto; /* Push the footer to the bottom */

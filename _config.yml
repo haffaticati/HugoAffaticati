@@ -1,0 +1,25 @@
+# Site settings
+title: Hugo Affaticati
+email: haffaticati@gmail.com
+description: >-
+  AI professional passionate about benchmarking and improving LLM performance. Join me as I share insights, research, and my experiences with the community.
+baseurl: ""
+url: ""
+github_username: haffaticati
+linkedin_url: "https://www.linkedin.com/in/haffaticati"
+
+# Permalinks
+permalink: pretty
+
+# Default layout settings
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+theme: minima
+plugins:
+  - jekyll-feed
+

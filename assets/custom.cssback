@@ -1,0 +1,301 @@
+/* Apply Inter font globally */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Improve text readability */
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p, a {
+    font-weight: 400;
+}
+
+/* Layout: Ensure content is centered and image is positioned lower */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area stretches to push the footer down */
+.main-content {
+    flex: 1;
+}
+
+/* Header Styling */
+header {
+    background-color: #f8f9fa;
+    width: 100%;
+    padding: 10px 0;
+    height: 60px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;  /* Make sure the header stays on top */
+}
+
+/* Header name positioning */
+.header-name {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navigation menu */
+.nav-menu {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0 10vw 0 0; /* Adjusted to be relative */
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    gap: 3vw; /* Fully relative spacing */
+    justify-content: flex-end;
+}
+
+/* Hamburger icon styling */
+.menu-toggle span, .menu-toggle::before, .menu-toggle::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #333;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Show the hamburger icon when clicked (turns to X) */
+.menu-toggle.open span {
+    transform: rotate(45deg);
+}
+
+.menu-toggle.open::before {
+    transform: rotate(-45deg);
+    top: 9px;
+}
+
+.menu-toggle.open::after {
+    opacity: 0;
+}
+
+/* Hide dropdown menu initially */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+}
+
+/* Show the dropdown when active */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Make the menu collapse when space is limited */
+@media (max-width: 800px) {
+    .nav-menu {
+        display: none; /* Hide the regular nav menu */
+    }
+
+    .menu-toggle {
+        display: block; /* Show three-dot button */
+    }
+
+    .dropdown-menu {
+        width: 100%;  /* Ensure the dropdown menu is wide enough */
+        position: fixed;
+        top: 60px; /* Position it below the header */
+        right: 0;
+        left: 0;
+        z-index: 100;
+    }
+}
+
+/* Style each navigation link */
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #ddd;
+}
+
+.nav-menu .active {
+    color: #007bff;
+}
+
+/* About Page Layout */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 100%;
+    padding: 5vh 10vw;
+    gap: 30px;
+}
+
+/* Left side: Bio */
+.about-bio {
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+}
+
+/* Expertise Section Bullet Points */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Name styling */
+.about-bio h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* No extra space between paragraphs except for resume link */
+.about-bio p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Publications Header Styling */
+.publications-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px 20px;
+    text-align: center;
+}
+
+.publications-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.publications-header p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Publications Container */
+.publication-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10vw;
+}
+
+/* Each individual publication entry */
+.publication-entry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+/* Left section with the title and text */
+.publication-left {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    min-width: 50%;
+}
+
+/* Right section with the image */
+.publication-right img {
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .publication-entry {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .publication-right img {
+        max-width: 100%;
+    }
+}
+
+/* Ensure proper alignment and style for links */
+.publication-left a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: block;
+}
+
+.publication-left a:hover {
+    text-decoration: underline;
+}
+
+.publication-left span {
+    display: block;
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.2;
+}
+
+/* About Page Image Styling */
+.about-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    width: 100%;
+    margin-top: auto;
+}
+

@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="{{ '/assets/custom.css' | relative_url }}">
+
+<header>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="/" class="{% if page.url == '/' %}active{% endif %}">About</a></li>
+            <li><a href="/publications/" class="{% if page.url == '/publications/' %}active{% endif %}">Publications</a></li>
+            <li><a href="/videos/" class="{% if page.url == '/videos/' %}active{% endif %}">Videos</a></li>
+            <li><a href="/conferences/" class="{% if page.url == '/conferences/' %}active{% endif %}">Conferences</a></li>
+            <li><a href="/contact/" class="{% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-name">
+        Hugo Affaticati
+    </div>
+</header>
+
