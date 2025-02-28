@@ -3,8 +3,8 @@ title: Hugo Affaticati
 email: haffaticati@gmail.com
 description: >-
   AI professional passionate about benchmarking and improving LLM performance. Join me as I share insights, research, and my experiences with the community.
-baseurl: ""
-url: ""
+baseurl: "/HugoAffaticati"
+url: "https://haffaticati.github.io"
 github_username: haffaticati
 linkedin_url: "https://www.linkedin.com/in/haffaticati"
 
