@@ -25,7 +25,7 @@ title: About
         </div>
 
         <div class="publication-right">
-            <img src="{{ '/assets/images/hugo.jpg' | relative_url }}" alt="Hugo Affaticati" width="100%">
+            <img src="{{ '/assets/images/hugo.png' | relative_url }}" alt="Hugo Affaticati" width="100%">
             <p>Hugo Affaticati (he/him)</p>
         </div>
     </div>
